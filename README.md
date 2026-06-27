@@ -31,14 +31,14 @@ Before running the code, you must set up a Firebase project:
 
 Because this project relies on picamera2 which communicates directly with the Pi's hardware, you must install the camera libraries system-wide and then give your virtual environment access to them.
 
-**1. Install System Dependencies**
+**1. Install System Dependencies**<br>
 Run these commands in your terminal:
 ```
 sudo apt update
 sudo apt install python3-picamera2
 ```
 
-**2. Create a Virtual Environment**
+**2. Create a Virtual Environment**<br>
 You must create the virtual environment using the system-site-packages flag so it can access the picamera2 library we just installed globally:
 ```
 python3 -m venv venv --system-site-packages
@@ -56,14 +56,14 @@ pip install -r requirements.txt
 
 ## Usage
 
-**1. Capture & Upload (Run on the Raspberry Pi)**
+**1. Capture & Upload (Run on the Raspberry Pi)**<br>
 Run the capture script to begin taking photos. It will run in a continuous loop, taking a photo every 5 seconds, uploading it, and clearing it from RAM.
 ```
 python main.py
 ```
 *(Press Ctrl+C to safely stop the timelapse).*
 
-**2. Download & Compile (Run on your local PC)**
+**2. Download & Compile (Run on your local PC)**<br>
 Once your timelapse is finished, run the compiler script on your main computer to download the images from Firebase and stitch them into an MP4 video.
 ```
 python video.py
