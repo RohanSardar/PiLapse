@@ -1,0 +1,3 @@
+firebase-admin
+Pillow
+opencv-python-headless
